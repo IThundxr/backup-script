@@ -1,5 +1,4 @@
 #!/bin/sh
-for server in survival; do
     cd "/home/backups"
     for f in *.tar.lz; do
     file_date="$(date -d "${f%.tar.lz}" +%s)"
@@ -8,4 +7,3 @@ for server in survival; do
       rm "$f"
         fi
         done
-done
