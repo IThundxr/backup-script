@@ -1,0 +1,4 @@
+#!/bin/sh
+screen -S minecraft -X stuff 'tellraw @a {"text":"[Server] Starting To Backup"}\n'
+tar --lzip -cf "/home/backups/$(date -u +%Y-%m-%dT%H:%M:%S).tar.lz" /home/server/world
+screen -S minecraft -X stuff 'tellraw @a {"text":"[Server] Backup Complete"}\n'
